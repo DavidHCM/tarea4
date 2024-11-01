@@ -1,7 +1,7 @@
 const userInput = sessionStorage.getItem('userInput');
 
 if (userInput) {
-    const socket = io('http://localhost:3000');
+    const socket = io('https://tarea4-c2wm.onrender.com');
     const room = window.location.href.split('/').pop();
 
     socket.emit('joinRoom', { room, user: userInput });
